@@ -12,7 +12,7 @@ import { FaPlus, FaTrash } from 'react-icons/fa';
 
 /**
  * Project Details Page
- * Apple Design Aesthetic: Minimalist, Focus on Content, Clean Typography.
+ * Displays project details, tasks, and team members.
  */
 const ProjectDetails = () => {
     const { id } = useParams();

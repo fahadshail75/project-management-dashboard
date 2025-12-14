@@ -9,7 +9,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 /**
  * Task Status Chart Component
- * Visualizes task distribution with a premium UI.
+ * Visualizes task distribution.
  */
 const TaskStatusChart = () => {
     const allTasks = useSelector(state => state.tasks.tasks);

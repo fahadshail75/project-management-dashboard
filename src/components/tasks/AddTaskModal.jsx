@@ -4,12 +4,10 @@ import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTask } from '../../store/slices/tasksSlice';
 import { selectTheme } from '../../store/slices/uiSlice';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 
 /**
  * Add Task Modal
- * Uses Formik and React Quill.
+ * Uses Formik for form handling.
  */
 const AddTaskModal = ({ isOpen, onClose, projectId }) => {
     const dispatch = useDispatch();
@@ -87,11 +85,9 @@ const AddTaskModal = ({ isOpen, onClose, projectId }) => {
 
                     <div className="mb-6">
                         <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                        <ReactQuill
-                            theme="snow"
-                            value={formik.values.description}
-                            onChange={(value) => formik.setFieldValue('description', value)}
-                            className="bg-white rounded-lg overflow-hidden"
+                        <textarea
+                            {...formik.getFieldProps('description')}
+                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 border-gray-300 min-h-[150px]"
                             placeholder="Task description..."
                         />
                     </div>
@@ -105,8 +101,7 @@ const AddTaskModal = ({ isOpen, onClose, projectId }) => {
                             Cancel
                         </button>
                         <button
-                            type="button"
-                            onClick={formik.submitForm}
+                            type="submit"
                             className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
                         >
                             Add Task

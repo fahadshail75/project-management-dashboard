@@ -6,7 +6,6 @@ import { FaPlus, FaEnvelope, FaTrash, FaCircle } from 'react-icons/fa';
 
 /**
  * Team Members Component
- * Aesthetic: Premium "People Widget" with vibrant avatars and hover interactions.
  */
 const TeamMembers = ({ projectId }) => {
     const dispatch = useDispatch();

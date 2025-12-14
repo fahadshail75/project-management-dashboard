@@ -6,7 +6,6 @@ import { FaChartPie, FaCheck, FaClock, FaList } from 'react-icons/fa';
 
 /**
  * Project Statistics Component
- * Aesthetic: Bento Box Grid, Clean White Cards, Soft Shadows.
  */
 const ProjectStats = ({ projectId }) => {
     const tasks = useSelector(state => selectTasksByProject(state, projectId));

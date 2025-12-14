@@ -7,7 +7,6 @@ import TaskColumn from './TaskColumn';
 
 /**
  * Kanban Board Component
- * Aesthetic: Transparent container to let page background show through.
  */
 const KanbanBoard = ({ projectId, onTaskClick }) => {
     const dispatch = useDispatch();

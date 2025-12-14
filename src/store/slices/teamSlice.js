@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 /**
  * Initial State for Team Members
- * Default members with Indian names and placeholder avatars (to be updated).
  */
 const initialState = {
     members: [
